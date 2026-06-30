@@ -1,6 +1,6 @@
-# Avios Taxonomy Tree
+# Taxonomy Tree
 
-Visual taxonomy editor for the Avios/IAG hashtag taxonomy. View the tree on GitHub Pages, edit nodes locally with autosaved drafts, and save changes back to GitHub via pull request.
+Visual taxonomy editor. View the tree on GitHub Pages, edit nodes locally with autosaved drafts, and save changes back to GitHub via pull request.
 
 ## Features
 
