@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-30T21:18:01.227Z",
+  "updatedAt": "2026-06-30T21:41:00.521Z",
   "root": {
     "id": "root",
     "label": "Avios Taxonomy",
@@ -708,17 +708,6 @@
                 "children": []
               },
               {
-                "id": "tag-67",
-                "label": "Linking",
-                "slug": "linking",
-                "tags": [
-                  "manage-avios",
-                  "linking"
-                ],
-                "metadata": {},
-                "children": []
-              },
-              {
                 "id": "tag-68",
                 "label": "Exchange",
                 "slug": "exchange",
@@ -757,13 +746,59 @@
       },
       {
         "id": "section-71",
-        "label": "Partners",
-        "slug": "partners",
-        "tags": [
-          "partners"
-        ],
+        "label": "Partner",
+        "slug": "partner",
+        "tags": [],
         "metadata": {},
         "children": [
+          {
+            "id": "tag-73",
+            "label": "Tier 1",
+            "slug": "tier-1",
+            "tags": [
+              "tier-1"
+            ],
+            "metadata": {
+              "tier": "tier-1"
+            },
+            "children": []
+          },
+          {
+            "id": "tag-74",
+            "label": "Tier 2",
+            "slug": "tier-2",
+            "tags": [
+              "tier-2"
+            ],
+            "metadata": {
+              "tier": "tier-2"
+            },
+            "children": []
+          },
+          {
+            "id": "8ed5411c-85c4-43d1-b491-b8314dbf51d8",
+            "label": "Tier 3",
+            "slug": "tier-3",
+            "tags": [
+              "t3"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-76",
+            "label": "Tier 4",
+            "slug": "tier-4",
+            "tags": [
+              "partner",
+              "tier-4"
+            ],
+            "metadata": {
+              "tier": "tier-4",
+              "type": "partner"
+            },
+            "children": []
+          },
           {
             "id": "section-72",
             "label": "Tiers",
@@ -774,30 +809,6 @@
             "metadata": {},
             "children": [
               {
-                "id": "tag-73",
-                "label": "Tier 1",
-                "slug": "tier-1",
-                "tags": [
-                  "tier-1"
-                ],
-                "metadata": {
-                  "tier": "tier-1"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-74",
-                "label": "Tier 2",
-                "slug": "tier-2",
-                "tags": [
-                  "tier-2"
-                ],
-                "metadata": {
-                  "tier": "tier-2"
-                },
-                "children": []
-              },
-              {
                 "id": "tag-75",
                 "label": "Partner",
                 "slug": "partner",
@@ -807,20 +818,6 @@
                 ],
                 "metadata": {
                   "tier": "tier-3",
-                  "type": "partner"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-76",
-                "label": "Tier 4",
-                "slug": "tier-4",
-                "tags": [
-                  "partner",
-                  "tier-4"
-                ],
-                "metadata": {
-                  "tier": "tier-4",
                   "type": "partner"
                 },
                 "children": []
