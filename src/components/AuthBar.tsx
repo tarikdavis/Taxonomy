@@ -57,7 +57,7 @@ export function AuthBar({
   return (
     <header className={styles.bar}>
       <div>
-        <h1 className={styles.title}>Avios Taxonomy Tree</h1>
+        <h1 className={styles.title}>Taxonomy Tree</h1>
         <p className={styles.subtitle}>
           {configured ? `GitHub source: ${getRepoDisplayName()}` : 'GitHub save is not configured yet'}
         </p>
