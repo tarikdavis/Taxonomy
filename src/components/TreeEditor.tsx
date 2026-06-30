@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { NodeRendererProps, TreeApi } from 'react-arborist';
 import { SimpleTree, Tree } from 'react-arborist';
 import type { ArboristNodeData } from '../lib/taxonomy';
@@ -22,7 +22,33 @@ function NodeRow({
   style,
   dragHandle,
 }: NodeRendererProps<ArboristNodeData>) {
+  const inputRef = useRef<HTMLInputElement>(null);
   const statusClass = node.data.status === 'tbc' ? styles.tbc : '';
+
+  useEffect(() => {
+    if (node.isEditing) {
+      inputRef.current?.focus();
+      inputRef.current?.select();
+    }
+  }, [node.isEditing]);
+
+  if (node.isEditing) {
+    return (
+      <div style={style} className={`${styles.nodeRow} ${styles.editing}`}>
+        <input
+          ref={inputRef}
+          className={styles.renameInput}
+          defaultValue={node.data.label}
+          onBlur={() => node.reset()}
+          onKeyDown={(event) => {
+            if (event.key === 'Escape') node.reset();
+            if (event.key === 'Enter') node.submit(inputRef.current?.value ?? '');
+          }}
+          onClick={(event) => event.stopPropagation()}
+        />
+      </div>
+    );
+  }
 
   return (
     <div
@@ -58,6 +84,23 @@ export function TreeEditor({
   onChange,
   treeRef,
 }: TreeEditorProps) {
+  const treeAreaRef = useRef<HTMLDivElement>(null);
+  const [treeHeight, setTreeHeight] = useState(480);
+
+  useEffect(() => {
+    const element = treeAreaRef.current;
+    if (!element) return;
+
+    const updateHeight = () => {
+      setTreeHeight(Math.max(240, element.clientHeight));
+    };
+
+    updateHeight();
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
   const syncTree = useCallback(
     (tree: SimpleTree<ArboristNodeData>) => {
       onChange(tree.data as ArboristNodeData[]);
@@ -67,6 +110,29 @@ export function TreeEditor({
 
   const handlers = useMemo(() => {
     const makeTree = () => new SimpleTree<ArboristNodeData>(cloneData(data));
+
+    const onCreate = ({
+      parentId,
+      index,
+      type,
+    }: {
+      parentId: string | null;
+      index: number;
+      type: 'internal' | 'leaf';
+    }) => {
+      const newNode: ArboristNodeData = {
+        id: crypto.randomUUID(),
+        label: type === 'internal' ? 'New group' : 'New tag',
+        slug: `new-tag-${Date.now()}`,
+        tags: [],
+        metadata: {},
+        children: [],
+      };
+      const tree = makeTree();
+      tree.create({ parentId, index, data: newNode });
+      syncTree(tree);
+      return newNode;
+    };
 
     return {
       onMove: (args: {
@@ -91,30 +157,7 @@ export function TreeEditor({
         });
         syncTree(tree);
       },
-      onCreate: ({
-        parentId,
-        index,
-        type,
-      }: {
-        parentId: string | null;
-        index: number;
-        type: 'internal' | 'leaf';
-      }) => {
-        const newNode: ArboristNodeData & { children?: ArboristNodeData[] } = {
-          id: crypto.randomUUID(),
-          label: type === 'internal' ? 'New group' : 'New tag',
-          slug: `new-tag-${Date.now()}`,
-          tags: [],
-          metadata: {},
-        };
-        if (type === 'internal') {
-          newNode.children = [];
-        }
-        const tree = makeTree();
-        tree.create({ parentId, index, data: newNode });
-        syncTree(tree);
-        return newNode;
-      },
+      onCreate,
       onDelete: ({ ids }: { ids: string[] }) => {
         const tree = makeTree();
         ids
@@ -124,6 +167,15 @@ export function TreeEditor({
       },
     };
   }, [data, syncTree]);
+
+  const handleAddChild = useCallback(() => {
+    const newNode = handlers.onCreate({
+      parentId: selectedId ?? 'root',
+      index: 0,
+      type: 'leaf',
+    });
+    onSelect(newNode.id);
+  }, [handlers, onSelect, selectedId]);
 
   const searchMatch = useMemo(() => {
     if (!searchTerm.trim()) return undefined;
@@ -143,13 +195,7 @@ export function TreeEditor({
         <button
           type="button"
           className={styles.toolbarButton}
-          onClick={() =>
-            void treeRef.current?.create({
-              type: 'leaf',
-              parentId: selectedId ?? 'root',
-              index: null,
-            })
-          }
+          onClick={handleAddChild}
         >
           Add child
         </button>
@@ -166,25 +212,27 @@ export function TreeEditor({
           Delete selected
         </button>
       </div>
-      <Tree
-        ref={treeRef}
-        data={data}
-        width="100%"
-        height={520}
-        indent={20}
-        rowHeight={34}
-        openByDefault
-        searchTerm={searchTerm}
-        searchMatch={searchMatch}
-        selection={selectedId ?? undefined}
-        onSelect={(nodes) => onSelect(nodes[0]?.id ?? null)}
-        onMove={handlers.onMove}
-        onRename={handlers.onRename}
-        onCreate={handlers.onCreate}
-        onDelete={handlers.onDelete}
-      >
-        {NodeRow}
-      </Tree>
+      <div ref={treeAreaRef} className={styles.treeArea}>
+        <Tree
+          ref={treeRef}
+          data={data}
+          width="100%"
+          height={treeHeight}
+          indent={20}
+          rowHeight={34}
+          openByDefault
+          searchTerm={searchTerm}
+          searchMatch={searchMatch}
+          selection={selectedId ?? undefined}
+          onSelect={(nodes) => onSelect(nodes[0]?.id ?? null)}
+          onMove={handlers.onMove}
+          onRename={handlers.onRename}
+          onCreate={handlers.onCreate}
+          onDelete={handlers.onDelete}
+        >
+          {NodeRow}
+        </Tree>
+      </div>
     </div>
   );
 }

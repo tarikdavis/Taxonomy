@@ -21,6 +21,7 @@ export interface ArboristNodeData {
   tags: string[];
   metadata: Record<string, string>;
   status?: 'tbc';
+  children: ArboristNodeData[];
 }
 
 let idCounter = 0;
@@ -105,7 +106,7 @@ export function deleteNode(root: TaxonomyNode, id: string): TaxonomyNode {
   };
 }
 
-export function toArboristData(node: TaxonomyNode): ArboristNodeData & { children?: ArboristNodeData[] } {
+export function toArboristData(node: TaxonomyNode): ArboristNodeData {
   return {
     id: node.id,
     label: node.label,
@@ -117,9 +118,7 @@ export function toArboristData(node: TaxonomyNode): ArboristNodeData & { childre
   };
 }
 
-export function fromArboristData(
-  data: ArboristNodeData & { children?: ArboristNodeData[] },
-): TaxonomyNode {
+export function fromArboristData(data: ArboristNodeData): TaxonomyNode {
   return {
     id: data.id,
     label: data.label,
@@ -127,7 +126,7 @@ export function fromArboristData(
     tags: data.tags,
     metadata: data.metadata,
     status: data.status,
-    children: (data.children ?? []).map(fromArboristData),
+    children: data.children.map(fromArboristData),
   };
 }
 

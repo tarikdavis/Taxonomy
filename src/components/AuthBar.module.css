@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 20px;
+  flex-shrink: 0;
   padding: 16px 20px;
   border: 1px solid #d8dee9;
   border-radius: 10px;

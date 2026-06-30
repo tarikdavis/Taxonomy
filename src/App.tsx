@@ -209,15 +209,19 @@ export default function App() {
       </div>
 
       <div className="workspace">
-        <TreeEditor
-          data={treeData}
-          selectedId={selectedId}
-          searchTerm={searchTerm}
-          onSelect={setSelectedId}
-          onChange={handleTreeChange}
-          treeRef={treeRef}
-        />
-        <NodeDetailPanel node={selectedNode} onUpdate={handleNodeUpdate} />
+        <div className="treePanel">
+          <TreeEditor
+            data={treeData}
+            selectedId={selectedId}
+            searchTerm={searchTerm}
+            onSelect={setSelectedId}
+            onChange={handleTreeChange}
+            treeRef={treeRef}
+          />
+        </div>
+        <div className="detailPanel">
+          <NodeDetailPanel node={selectedNode} onUpdate={handleNodeUpdate} />
+        </div>
       </div>
     </main>
   );
