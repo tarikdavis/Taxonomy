@@ -3,17 +3,10 @@ import type { TaxonomyDocument } from './taxonomy';
 const TOKEN_KEY = 'github-oauth-token';
 const REPO_OWNER = import.meta.env.VITE_GITHUB_REPO_OWNER as string | undefined;
 const REPO_NAME = import.meta.env.VITE_GITHUB_REPO_NAME as string | undefined;
-const CLIENT_ID = import.meta.env.VITE_GITHUB_CLIENT_ID as string | undefined;
 const TAXONOMY_PATH = 'public/data/taxonomy.json';
 
-export interface DeviceAuthSession {
-  userCode: string;
-  verificationUri: string;
-  expiresIn: number;
-}
-
 export function isGitHubConfigured(): boolean {
-  return Boolean(CLIENT_ID && REPO_OWNER && REPO_NAME);
+  return Boolean(REPO_OWNER && REPO_NAME);
 }
 
 export function getRepoDisplayName(): string {
@@ -21,103 +14,27 @@ export function getRepoDisplayName(): string {
   return `${REPO_OWNER}/${REPO_NAME}`;
 }
 
+export function getTokenCreateUrl(): string {
+  const repo = REPO_OWNER && REPO_NAME ? `${REPO_OWNER}/${REPO_NAME}` : '';
+  if (repo) {
+    return `https://github.com/settings/tokens/new?description=Avios%20Taxonomy%20Tree&scopes=repo`;
+  }
+  return 'https://github.com/settings/tokens/new';
+}
+
 export function getStoredToken(): string | null {
   return sessionStorage.getItem(TOKEN_KEY);
+}
+
+export function setStoredToken(token: string): void {
+  sessionStorage.setItem(TOKEN_KEY, token.trim());
 }
 
 export function clearStoredToken(): void {
   sessionStorage.removeItem(TOKEN_KEY);
 }
 
-export async function startDeviceFlow(): Promise<DeviceAuthSession & { poll: () => Promise<string> }> {
-  if (!CLIENT_ID) {
-    throw new Error('VITE_GITHUB_CLIENT_ID is not configured.');
-  }
-
-  const response = await fetch('https://github.com/login/device/code', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      client_id: CLIENT_ID,
-      scope: 'repo',
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error('Failed to start GitHub device authorization.');
-  }
-
-  const payload = (await response.json()) as {
-    device_code: string;
-    user_code: string;
-    verification_uri: string;
-    expires_in: number;
-    interval: number;
-  };
-
-  const poll = async (): Promise<string> => {
-    const deadline = Date.now() + payload.expires_in * 1000;
-    let intervalMs = payload.interval * 1000;
-
-    while (Date.now() < deadline) {
-      await new Promise((resolve) => setTimeout(resolve, intervalMs));
-
-      const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          client_id: CLIENT_ID,
-          device_code: payload.device_code,
-          grant_type: 'urn:ietf:params:oauth:grant-type:device_code',
-        }),
-      });
-
-      const tokenData = (await tokenResponse.json()) as {
-        access_token?: string;
-        error?: string;
-        interval?: number;
-      };
-
-      if (tokenData.access_token) {
-        sessionStorage.setItem(TOKEN_KEY, tokenData.access_token);
-        return tokenData.access_token;
-      }
-
-      if (tokenData.error === 'authorization_pending') {
-        continue;
-      }
-
-      if (tokenData.error === 'slow_down' && tokenData.interval) {
-        intervalMs = tokenData.interval * 1000;
-        continue;
-      }
-
-      throw new Error(tokenData.error ?? 'GitHub authorization failed.');
-    }
-
-    throw new Error('GitHub authorization timed out.');
-  };
-
-  return {
-    userCode: payload.user_code,
-    verificationUri: payload.verification_uri,
-    expiresIn: payload.expires_in,
-    poll,
-  };
-}
-
-async function githubFetch<T>(path: string, init?: RequestInit): Promise<T> {
-  const token = getStoredToken();
-  if (!token) {
-    throw new Error('Not signed in to GitHub.');
-  }
-
+async function githubFetch<T>(path: string, token: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`https://api.github.com${path}`, {
     ...init,
     headers: {
@@ -136,23 +53,29 @@ async function githubFetch<T>(path: string, init?: RequestInit): Promise<T> {
   return response.json() as Promise<T>;
 }
 
-export interface RemoteFileInfo {
-  sha: string;
-  content: string;
+export async function validateToken(token: string): Promise<{ login: string }> {
+  if (!REPO_OWNER || !REPO_NAME) {
+    throw new Error('GitHub repository is not configured.');
+  }
+
+  const user = await githubFetch<{ login: string }>('/user', token);
+  await githubFetch(`/repos/${REPO_OWNER}/${REPO_NAME}`, token);
+  return user;
 }
 
 export async function fetchRemoteTaxonomy(): Promise<{
   document: TaxonomyDocument;
   sha: string;
 }> {
-  if (!REPO_OWNER || !REPO_NAME) {
-    throw new Error('GitHub repository is not configured.');
+  const token = getStoredToken();
+  if (!token || !REPO_OWNER || !REPO_NAME) {
+    throw new Error('Not signed in to GitHub.');
   }
 
   const data = await githubFetch<{
     content: string;
     sha: string;
-  }>(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${TAXONOMY_PATH}`);
+  }>(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${TAXONOMY_PATH}`, token);
 
   const decoded = atob(data.content.replace(/\n/g, ''));
   return {
@@ -172,20 +95,18 @@ export async function saveTaxonomyViaPullRequest(
   remoteSha: string,
   message = 'Update taxonomy tree',
 ): Promise<SaveResult> {
-  if (!REPO_OWNER || !REPO_NAME) {
-    throw new Error('GitHub repository is not configured.');
-  }
-
-  if (!getStoredToken()) {
+  const token = getStoredToken();
+  if (!token || !REPO_OWNER || !REPO_NAME) {
     throw new Error('Not signed in to GitHub.');
   }
 
   const branch = `taxonomy/edit-${Date.now()}`;
   const mainRef = await githubFetch<{ object: { sha: string } }>(
     `/repos/${REPO_OWNER}/${REPO_NAME}/git/ref/heads/main`,
+    token,
   );
 
-  await githubFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/refs`, {
+  await githubFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/refs`, token, {
     method: 'POST',
     body: JSON.stringify({
       ref: `refs/heads/${branch}`,
@@ -197,6 +118,7 @@ export async function saveTaxonomyViaPullRequest(
 
   const commit = await githubFetch<{ commit: { sha: string } }>(
     `/repos/${REPO_OWNER}/${REPO_NAME}/contents/${TAXONOMY_PATH}`,
+    token,
     {
       method: 'PUT',
       body: JSON.stringify({
@@ -210,6 +132,7 @@ export async function saveTaxonomyViaPullRequest(
 
   const pullRequest = await githubFetch<{ html_url: string }>(
     `/repos/${REPO_OWNER}/${REPO_NAME}/pulls`,
+    token,
     {
       method: 'POST',
       body: JSON.stringify({

@@ -24,7 +24,6 @@ Copy `.env.example` to `.env.local` and set:
 
 ```env
 VITE_BASE_PATH=/
-VITE_GITHUB_CLIENT_ID=your_oauth_app_client_id
 VITE_GITHUB_REPO_OWNER=your-github-username
 VITE_GITHUB_REPO_NAME=Taxonomy
 ```
@@ -45,29 +44,26 @@ npm run import
 
 1. Push this repository to GitHub.
 2. In **Settings → Pages**, set source to **GitHub Actions**.
-3. Add repository variables (Settings → Secrets and variables → Actions → Variables):
-   - `VITE_GITHUB_CLIENT_ID` — OAuth App client ID
-4. On push to `main`, the deploy workflow builds and publishes the site.
+3. On push to `main`, the deploy workflow builds and publishes the site.
 
 Site URL: `https://<owner>.github.io/Taxonomy/`
 
-## GitHub OAuth App setup
+## GitHub sign-in (personal access token)
 
-Create an OAuth App at [GitHub Developer Settings](https://github.com/settings/developers):
+GitHub OAuth/Device Flow cannot run directly from a static GitHub Pages site (browser CORS blocks `github.com` auth endpoints). Instead, each editor signs in with a **classic personal access token**:
 
-| Field | Value |
-|-------|-------|
-| Application name | Avios Taxonomy Tree |
-| Homepage URL | `https://<owner>.github.io/Taxonomy/` |
-| Authorization callback URL | `https://<owner>.github.io/Taxonomy/` |
+1. Go to [github.com/settings/tokens](https://github.com/settings/tokens) → **Generate new token (classic)**
+2. Enable the **`repo`** scope
+3. Copy the token (`ghp_...`)
+4. In the app, click **Sign in with GitHub** and paste the token
 
-Use the **Client ID** as `VITE_GITHUB_CLIENT_ID`. The app uses **GitHub Device Flow** (no client secret in the browser), which works on static GitHub Pages without a backend.
+The token is stored in `sessionStorage` for the current browser session only — it is never committed to the repo.
 
 Add collaborators with write access so they can create pull requests when saving.
 
 ## Save workflow
 
-1. Sign in with GitHub.
+1. Sign in with your personal access token.
 2. Edit the tree (changes autosave to a local draft).
 3. Click **Save to GitHub (PR)**.
 4. The app creates branch `taxonomy/edit-<timestamp>`, commits `public/data/taxonomy.json`, and opens a pull request for review.

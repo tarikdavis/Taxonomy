@@ -3,8 +3,10 @@ import {
   clearStoredToken,
   getRepoDisplayName,
   getStoredToken,
+  getTokenCreateUrl,
   isGitHubConfigured,
-  startDeviceFlow,
+  setStoredToken,
+  validateToken,
 } from '../lib/github';
 import styles from './AuthBar.module.css';
 
@@ -29,22 +31,21 @@ export function AuthBar({
 }: AuthBarProps) {
   const signedIn = Boolean(getStoredToken());
   const configured = isGitHubConfigured();
-  const [deviceCode, setDeviceCode] = useState<string | null>(null);
-  const [deviceUri, setDeviceUri] = useState<string | null>(null);
+  const [showTokenForm, setShowTokenForm] = useState(false);
+  const [tokenInput, setTokenInput] = useState('');
   const [authError, setAuthError] = useState<string | null>(null);
   const [isAuthorizing, setIsAuthorizing] = useState(false);
+  const [signedInAs, setSignedInAs] = useState<string | null>(null);
 
   const handleSignIn = async () => {
     setAuthError(null);
     setIsAuthorizing(true);
     try {
-      const session = await startDeviceFlow();
-      setDeviceCode(session.userCode);
-      setDeviceUri(session.verificationUri);
-      window.open(session.verificationUri, '_blank', 'noopener,noreferrer');
-      await session.poll();
-      setDeviceCode(null);
-      setDeviceUri(null);
+      const user = await validateToken(tokenInput);
+      setStoredToken(tokenInput);
+      setSignedInAs(user.login);
+      setTokenInput('');
+      setShowTokenForm(false);
       window.location.reload();
     } catch (error) {
       setAuthError(error instanceof Error ? error.message : 'GitHub sign-in failed.');
@@ -77,14 +78,13 @@ export function AuthBar({
           </button>
         )}
 
-        {configured && !signedIn && (
+        {configured && !signedIn && !showTokenForm && (
           <button
             type="button"
             className={styles.primaryButton}
-            disabled={isAuthorizing}
-            onClick={() => void handleSignIn()}
+            onClick={() => setShowTokenForm(true)}
           >
-            {isAuthorizing ? 'Waiting for GitHub…' : 'Sign in with GitHub'}
+            Sign in with GitHub
           </button>
         )}
 
@@ -112,14 +112,53 @@ export function AuthBar({
         )}
       </div>
 
-      {deviceCode && deviceUri && (
-        <p className={styles.message}>
-          Enter code <strong>{deviceCode}</strong> at{' '}
-          <a href={deviceUri} target="_blank" rel="noreferrer">
-            {deviceUri}
-          </a>
-        </p>
+      {showTokenForm && !signedIn && (
+        <div className={styles.tokenPanel}>
+          <p className={styles.tokenHelp}>
+            GitHub OAuth cannot run directly in the browser on GitHub Pages. Create a{' '}
+            <strong>classic personal access token</strong> with <code>repo</code> scope, then paste
+            it below. The token stays in this browser session only.
+          </p>
+          <p className={styles.tokenHelp}>
+            <a href={getTokenCreateUrl()} target="_blank" rel="noreferrer">
+              Create a token on GitHub
+            </a>
+          </p>
+          <label className={styles.tokenField}>
+            <span>Personal access token</span>
+            <input
+              type="password"
+              value={tokenInput}
+              onChange={(event) => setTokenInput(event.target.value)}
+              placeholder="ghp_..."
+              autoComplete="off"
+            />
+          </label>
+          <div className={styles.tokenActions}>
+            <button
+              type="button"
+              className={styles.primaryButton}
+              disabled={isAuthorizing || !tokenInput.trim()}
+              onClick={() => void handleSignIn()}
+            >
+              {isAuthorizing ? 'Verifying…' : 'Sign in'}
+            </button>
+            <button
+              type="button"
+              className={styles.secondaryButton}
+              onClick={() => {
+                setShowTokenForm(false);
+                setTokenInput('');
+                setAuthError(null);
+              }}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
       )}
+
+      {signedInAs && <p className={styles.message}>Signed in as {signedInAs}</p>}
       {authError && <p className={styles.error}>{authError}</p>}
       {saveMessage && <p className={styles.message}>{saveMessage}</p>}
     </header>

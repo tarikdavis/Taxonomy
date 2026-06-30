@@ -76,3 +76,38 @@
   color: #b42318;
   font-size: 14px;
 }
+
+.tokenPanel {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.tokenHelp {
+  margin: 0 0 10px;
+  color: #4b5c74;
+  font-size: 14px;
+}
+
+.tokenField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #4b5c74;
+}
+
+.tokenField input {
+  border: 1px solid #c7d2e3;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.tokenActions {
+  display: flex;
+  gap: 8px;
+}
