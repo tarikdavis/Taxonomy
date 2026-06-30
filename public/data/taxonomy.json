@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-30T20:50:17.999Z",
+  "updatedAt": "2026-06-30T21:18:01.227Z",
   "root": {
     "id": "root",
     "label": "Avios Taxonomy",
@@ -25,7 +25,18 @@
               "en-GB"
             ],
             "metadata": {},
-            "children": []
+            "children": [
+              {
+                "id": "tag-5",
+                "label": "British Airways Club",
+                "slug": "british-airways-club",
+                "tags": [
+                  "british-airways-club"
+                ],
+                "metadata": {},
+                "children": []
+              }
+            ]
           },
           {
             "id": "tag-3",
@@ -43,16 +54,6 @@
             "slug": "es-ES",
             "tags": [
               "es-ES"
-            ],
-            "metadata": {},
-            "children": []
-          },
-          {
-            "id": "tag-5",
-            "label": "British Airways Club",
-            "slug": "british-airways-club",
-            "tags": [
-              "british-airways-club"
             ],
             "metadata": {},
             "children": []
@@ -468,17 +469,6 @@
                 "children": []
               },
               {
-                "id": "tag-45",
-                "label": "Best Seller",
-                "slug": "best-seller",
-                "tags": [
-                  "shop-online",
-                  "best-seller"
-                ],
-                "metadata": {},
-                "children": []
-              },
-              {
                 "id": "tag-46",
                 "label": "Upsell",
                 "slug": "upsell",
@@ -530,6 +520,17 @@
                 "children": []
               }
             ]
+          },
+          {
+            "id": "tag-45",
+            "label": "Best Seller",
+            "slug": "best-seller",
+            "tags": [
+              "shop-online",
+              "best-seller"
+            ],
+            "metadata": {},
+            "children": []
           },
           {
             "id": "section-51",
