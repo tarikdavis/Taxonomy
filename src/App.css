@@ -1,0 +1,57 @@
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.status {
+  padding: 24px;
+  color: #4b5c74;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+  gap: 16px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid #c7d2e3;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.toolbarButton {
+  border: 1px solid #c7d2e3;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.banner {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #eef4ff;
+}
+
+.banner.error {
+  background: #fff1f0;
+  color: #b42318;
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}

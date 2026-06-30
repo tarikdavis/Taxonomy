@@ -1,0 +1,60 @@
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid #f0f3f8;
+  background: #fafbfd;
+}
+
+.toolbarButton {
+  border: 1px solid #c7d2e3;
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.treeWrap {
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f3f8;
+}
+
+.nodeRow:hover,
+.selected {
+  background: #eef4ff;
+}
+
+.chevron {
+  width: 16px;
+  color: #5b6b84;
+  flex-shrink: 0;
+}
+
+.nodeLabel {
+  font-weight: 500;
+  color: #1f2a3d;
+}
+
+.tagPreview {
+  margin-left: auto;
+  color: #6b7a90;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tbc .nodeLabel {
+  color: #9a6700;
+}

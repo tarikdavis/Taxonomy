@@ -1,0 +1,1942 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-30T20:50:17.999Z",
+  "root": {
+    "id": "root",
+    "label": "Avios Taxonomy",
+    "slug": "avios-taxonomy",
+    "tags": [],
+    "metadata": {},
+    "children": [
+      {
+        "id": "section-1",
+        "label": "Categories",
+        "slug": "categories",
+        "tags": [
+          "categories"
+        ],
+        "metadata": {},
+        "children": [
+          {
+            "id": "tag-2",
+            "label": "En GB",
+            "slug": "en-GB",
+            "tags": [
+              "en-GB"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-3",
+            "label": "En US",
+            "slug": "en-US",
+            "tags": [
+              "en-US"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-4",
+            "label": "Es ES",
+            "slug": "es-ES",
+            "tags": [
+              "es-ES"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-5",
+            "label": "British Airways Club",
+            "slug": "british-airways-club",
+            "tags": [
+              "british-airways-club"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-6",
+            "label": "Iberia Club",
+            "slug": "iberia-club",
+            "tags": [
+              "iberia-club"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-7",
+            "label": "Aer Club",
+            "slug": "aer-club",
+            "tags": [
+              "aer-club"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-8",
+            "label": "Ireland",
+            "slug": "ireland",
+            "tags": [
+              "ireland"
+            ],
+            "metadata": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "section-9",
+        "label": "Airline partners",
+        "slug": "airline-partners",
+        "tags": [
+          "airline-partners"
+        ],
+        "metadata": {},
+        "children": [
+          {
+            "id": "tag-10",
+            "label": "British Airways",
+            "slug": "british-airways",
+            "tags": [
+              "british-airways"
+            ],
+            "metadata": {
+              "opco": "british-airways"
+            },
+            "children": []
+          },
+          {
+            "id": "tag-11",
+            "label": "Aer Lingus",
+            "slug": "aer-lingus",
+            "tags": [
+              "aer-lingus"
+            ],
+            "metadata": {
+              "opco": "aer-lingus"
+            },
+            "children": []
+          },
+          {
+            "id": "tag-12",
+            "label": "Iberia Express",
+            "slug": "iberia-express",
+            "tags": [
+              "iberia-express"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-13",
+            "label": "Vueling",
+            "slug": "vueling",
+            "tags": [
+              "vueling"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-14",
+            "label": "Finnair",
+            "slug": "finnair",
+            "tags": [
+              "finnair"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-15",
+            "label": "Qatar",
+            "slug": "qatar",
+            "tags": [
+              "qatar"
+            ],
+            "metadata": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "section-16",
+        "label": "Other airline partners",
+        "slug": "other-airline-partners",
+        "tags": [
+          "other-airline-partners"
+        ],
+        "metadata": {},
+        "children": [
+          {
+            "id": "tag-17",
+            "label": "Alaska Airlines",
+            "slug": "alaska-airlines",
+            "tags": [
+              "alaska-airlines"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-18",
+            "label": "American Airlines",
+            "slug": "american-airlines",
+            "tags": [
+              "american-airlines"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-19",
+            "label": "Cathay Pacific",
+            "slug": "cathay-pacific",
+            "tags": [
+              "cathay-pacific"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-20",
+            "label": "China Southern",
+            "slug": "china-southern",
+            "tags": [
+              "china-southern"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-21",
+            "label": "Fiji Airways",
+            "slug": "fiji-airways",
+            "tags": [
+              "fiji-airways"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-22",
+            "label": "Japan Airlines",
+            "slug": "japan-airlines",
+            "tags": [
+              "japan-airlines"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-23",
+            "label": "Latam Airlines",
+            "slug": "latam-airlines",
+            "tags": [
+              "latam-airlines"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-24",
+            "label": "Loganair",
+            "slug": "loganair",
+            "tags": [
+              "loganair"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-25",
+            "label": "Malaysia Airlines",
+            "slug": "malaysia-airlines",
+            "tags": [
+              "malaysia-airlines"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-26",
+            "label": "Royal Air Maroc",
+            "slug": "royal-air-maroc",
+            "tags": [
+              "royal-air-maroc"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-27",
+            "label": "Royal Jordanian",
+            "slug": "royal-jordanian",
+            "tags": [
+              "royal-jordanian"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "tag-28",
+            "label": "Srilankan Airlines",
+            "slug": "srilankan-airlines",
+            "tags": [
+              "srilankan-airlines"
+            ],
+            "metadata": {},
+            "children": []
+          },
+          {
+            "id": "section-29",
+            "label": "Collect",
+            "slug": "collect",
+            "tags": [
+              "collect"
+            ],
+            "metadata": {},
+            "children": [
+              {
+                "id": "tag-30",
+                "label": "Collect Avios",
+                "slug": "collect-avios",
+                "tags": [
+                  "collect-avios"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-31",
+                "label": "Partner",
+                "slug": "partner",
+                "tags": [
+                  "collect-avios",
+                  "partner"
+                ],
+                "metadata": {
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-32",
+                "label": "Merchant",
+                "slug": "merchant",
+                "tags": [
+                  "collect-avios",
+                  "merchant"
+                ],
+                "metadata": {
+                  "type": "merchant"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-33",
+                "label": "Partner",
+                "slug": "partner",
+                "tags": [
+                  "partner"
+                ],
+                "metadata": {
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-34",
+                "label": "Merchant",
+                "slug": "merchant",
+                "tags": [
+                  "merchant"
+                ],
+                "metadata": {
+                  "type": "merchant"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-35",
+                "label": "Purchase Avios",
+                "slug": "purchase-avios",
+                "tags": [
+                  "purchase-avios"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-36",
+                "label": "Subscribe Avios",
+                "slug": "subscribe-avios",
+                "tags": [
+                  "subscribe-avios"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-37",
+                "label": "Boost Avios",
+                "slug": "boost-avios",
+                "tags": [
+                  "boost-avios"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-38",
+                "label": "Gift Avios",
+                "slug": "gift-avios",
+                "tags": [
+                  "gift-avios"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-39",
+                "label": "Shop Online",
+                "slug": "shop-online",
+                "tags": [
+                  "shop-online"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-40",
+                "label": "Avios Shop",
+                "slug": "avios-shop",
+                "tags": [
+                  "shop-online",
+                  "avios-shop"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-41",
+                "label": "Wineflyer",
+                "slug": "wineflyer",
+                "tags": [
+                  "shop-online",
+                  "wineflyer"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-42",
+                "label": "Popular",
+                "slug": "popular",
+                "tags": [
+                  "shop-online",
+                  "popular"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-43",
+                "label": "Special Offer",
+                "slug": "special-offer",
+                "tags": [
+                  "shop-online",
+                  "special-offer"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-44",
+                "label": "Featured",
+                "slug": "featured",
+                "tags": [
+                  "shop-online",
+                  "featured"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-45",
+                "label": "Best Seller",
+                "slug": "best-seller",
+                "tags": [
+                  "shop-online",
+                  "best-seller"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-46",
+                "label": "Upsell",
+                "slug": "upsell",
+                "tags": [
+                  "shop-online",
+                  "upsell"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-47",
+                "label": "Shop Instore",
+                "slug": "shop-instore",
+                "tags": [
+                  "shop-instore"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-48",
+                "label": "Part Payment",
+                "slug": "part-payment",
+                "tags": [
+                  "part-payment"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-49",
+                "label": "Travel",
+                "slug": "travel",
+                "tags": [
+                  "travel"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-50",
+                "label": "Finance",
+                "slug": "finance",
+                "tags": [
+                  "finance"
+                ],
+                "metadata": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "section-51",
+            "label": "Spend",
+            "slug": "spend",
+            "tags": [
+              "spend"
+            ],
+            "metadata": {},
+            "children": [
+              {
+                "id": "tag-52",
+                "label": "Spend Avios",
+                "slug": "spend-avios",
+                "tags": [
+                  "spend-avios"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-53",
+                "label": "Travel",
+                "slug": "travel",
+                "tags": [
+                  "travel"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-54",
+                "label": "Reward",
+                "slug": "reward",
+                "tags": [
+                  "travel",
+                  "flights",
+                  "reward"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-55",
+                "label": "Car Hire",
+                "slug": "car-hire",
+                "tags": [
+                  "travel",
+                  "car-hire"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-56",
+                "label": "Avis",
+                "slug": "avis",
+                "tags": [
+                  "travel",
+                  "car-hire",
+                  "avis"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-57",
+                "label": "Budget",
+                "slug": "budget",
+                "tags": [
+                  "travel",
+                  "car-hire",
+                  "budget"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-58",
+                "label": "Leshuttle",
+                "slug": "leshuttle",
+                "tags": [
+                  "travel",
+                  "partner",
+                  "leshuttle"
+                ],
+                "metadata": {
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-59",
+                "label": "Experiences",
+                "slug": "experiences",
+                "tags": [
+                  "experiences"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-60",
+                "label": "Vouchers",
+                "slug": "vouchers",
+                "tags": [
+                  "vouchers"
+                ],
+                "metadata": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "section-61",
+            "label": "Manage",
+            "slug": "manage",
+            "tags": [
+              "manage"
+            ],
+            "metadata": {},
+            "children": [
+              {
+                "id": "tag-62",
+                "label": "Manage Avios",
+                "slug": "manage-avios",
+                "tags": [
+                  "manage-avios"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-63",
+                "label": "Balance",
+                "slug": "balance",
+                "tags": [
+                  "manage-avios",
+                  "balance"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-64",
+                "label": "Transactions",
+                "slug": "transactions",
+                "tags": [
+                  "manage-avios",
+                  "transactions"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-65",
+                "label": "Transfer",
+                "slug": "transfer",
+                "tags": [
+                  "manage-avios",
+                  "transfer"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-66",
+                "label": "Linking",
+                "slug": "linking",
+                "tags": [
+                  "manage-avios",
+                  "linking"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-67",
+                "label": "Linking",
+                "slug": "linking",
+                "tags": [
+                  "manage-avios",
+                  "linking"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-68",
+                "label": "Exchange",
+                "slug": "exchange",
+                "tags": [
+                  "manage-avios",
+                  "exchange"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-69",
+                "label": "Wallet",
+                "slug": "wallet",
+                "tags": [
+                  "manage-avios",
+                  "wallet"
+                ],
+                "metadata": {},
+                "children": []
+              },
+              {
+                "id": "tag-70",
+                "label": "Global Currency",
+                "slug": "global-currency",
+                "tags": [
+                  "manage-avios",
+                  "global-currency"
+                ],
+                "metadata": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "section-71",
+        "label": "Partners",
+        "slug": "partners",
+        "tags": [
+          "partners"
+        ],
+        "metadata": {},
+        "children": [
+          {
+            "id": "section-72",
+            "label": "Tiers",
+            "slug": "tiers",
+            "tags": [
+              "tiers"
+            ],
+            "metadata": {},
+            "children": [
+              {
+                "id": "tag-73",
+                "label": "Tier 1",
+                "slug": "tier-1",
+                "tags": [
+                  "tier-1"
+                ],
+                "metadata": {
+                  "tier": "tier-1"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-74",
+                "label": "Tier 2",
+                "slug": "tier-2",
+                "tags": [
+                  "tier-2"
+                ],
+                "metadata": {
+                  "tier": "tier-2"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-75",
+                "label": "Partner",
+                "slug": "partner",
+                "tags": [
+                  "tier-3",
+                  "partner"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-76",
+                "label": "Tier 4",
+                "slug": "tier-4",
+                "tags": [
+                  "partner",
+                  "tier-4"
+                ],
+                "metadata": {
+                  "tier": "tier-4",
+                  "type": "partner"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "section-77",
+            "label": "Financial services",
+            "slug": "financial-services",
+            "tags": [
+              "financial-services"
+            ],
+            "metadata": {},
+            "children": [
+              {
+                "id": "tag-78",
+                "label": "Financial Services",
+                "slug": "financial-services",
+                "tags": [
+                  "financial-services"
+                ],
+                "metadata": {
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-79",
+                "label": "Amex",
+                "slug": "amex",
+                "tags": [
+                  "partner",
+                  "tier-1",
+                  "financial-services",
+                  "amex"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-80",
+                "label": "Chase",
+                "slug": "chase",
+                "tags": [
+                  "partner",
+                  "tier-1",
+                  "financial-services",
+                  "chase"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-81",
+                "label": "Lto",
+                "slug": "lto",
+                "tags": [
+                  "partner",
+                  "tier-1",
+                  "financial-services",
+                  "chase",
+                  "lto"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-82",
+                "label": "Bank Of Ireland",
+                "slug": "bank-of-ireland",
+                "tags": [
+                  "partner",
+                  "tier-1",
+                  "financial-services",
+                  "bank-of-ireland"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-83",
+                "label": "Barclays",
+                "slug": "barclays",
+                "tags": [
+                  "partner",
+                  "tier-1",
+                  "financial-services",
+                  "barclays"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-84",
+                "label": "Ur",
+                "slug": "ur",
+                "tags": [
+                  "partner",
+                  "tier-2",
+                  "financial-services",
+                  "chase",
+                  "ur"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-85",
+                "label": "Revolut",
+                "slug": "revolut",
+                "tags": [
+                  "partner",
+                  "tier-2",
+                  "financial-services",
+                  "revolut"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-86",
+                "label": "Mr",
+                "slug": "mr",
+                "tags": [
+                  "partner",
+                  "tier-2",
+                  "financial-services",
+                  "amex",
+                  "mr"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-87",
+                "label": "Royal Bank Of Canada",
+                "slug": "royal-bank-of-canada",
+                "tags": [
+                  "partner",
+                  "tier-2",
+                  "financial-services",
+                  "royal-bank-of-canada"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "category": "financial-services"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "section-88",
+            "label": "Consumer and retail products",
+            "slug": "consumer-and-retail-products",
+            "tags": [
+              "consumer-and-retail-products"
+            ],
+            "metadata": {},
+            "children": [
+              {
+                "id": "tag-89",
+                "label": "Leshuttle",
+                "slug": "leshuttle",
+                "tags": [
+                  "british-airways",
+                  "partner",
+                  "tier-1",
+                  "leshuttle"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-90",
+                "label": "Uber Rides",
+                "slug": "uber-rides",
+                "tags": [
+                  "british-airways",
+                  "partner",
+                  "tier-1",
+                  "uber-rides"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-91",
+                "label": "Uber Rides",
+                "slug": "uber-rides",
+                "tags": [
+                  "partner",
+                  "aer-lingus",
+                  "tier-1",
+                  "uber-rides"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-92",
+                "label": "Uber Eats",
+                "slug": "uber-eats",
+                "tags": [
+                  "partner",
+                  "british-airways",
+                  "tier-2",
+                  "uber-eats"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-93",
+                "label": "Uber Eats",
+                "slug": "uber-eats",
+                "tags": [
+                  "partner",
+                  "aer-lingus",
+                  "tier-2",
+                  "uber-eats"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-94",
+                "label": "Royal Caribbean",
+                "slug": "royal-caribbean",
+                "tags": [
+                  "partner",
+                  "british-airways",
+                  "tier-2",
+                  "royal-caribbean"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-95",
+                "label": "Royal Caribbean",
+                "slug": "royal-caribbean",
+                "tags": [
+                  "partner",
+                  "aer-lingus",
+                  "tier-2",
+                  "royal-caribbean"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-96",
+                "label": "Avios Hotels",
+                "slug": "avios-hotels",
+                "tags": [
+                  "partner",
+                  "british-airways",
+                  "avios-hotels"
+                ],
+                "metadata": {
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-97",
+                "label": "Avios Hotels",
+                "slug": "avios-hotels",
+                "tags": [
+                  "partner",
+                  "aer-lingus",
+                  "avios-hotels"
+                ],
+                "metadata": {
+                  "type": "partner",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-98",
+                "label": "Avis",
+                "slug": "avis",
+                "tags": [
+                  "partner",
+                  "british-airways",
+                  "avis"
+                ],
+                "metadata": {
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-99",
+                "label": "Avis",
+                "slug": "avis",
+                "tags": [
+                  "partner",
+                  "aer-lingus",
+                  "avis"
+                ],
+                "metadata": {
+                  "type": "partner",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-100",
+                "label": "Nectar",
+                "slug": "nectar",
+                "tags": [
+                  "british-airways",
+                  "partner",
+                  "tier-1",
+                  "nectar"
+                ],
+                "metadata": {
+                  "tier": "tier-1",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-101",
+                "label": "Avios Shop",
+                "slug": "avios-shop",
+                "tags": [
+                  "british-airways",
+                  "avios-shop"
+                ],
+                "metadata": {
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-102",
+                "label": "Estore",
+                "slug": "estore",
+                "tags": [
+                  "aer-lingus",
+                  "estore"
+                ],
+                "metadata": {
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-103",
+                "label": "Purchase Avios",
+                "slug": "purchase-avios",
+                "tags": [
+                  "british-airways",
+                  "purchase-avios"
+                ],
+                "metadata": {
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-104",
+                "label": "Purchase Avios",
+                "slug": "purchase-avios",
+                "tags": [
+                  "aer-lingus",
+                  "purchase-avios"
+                ],
+                "metadata": {
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-105",
+                "label": "Wineflyer",
+                "slug": "wineflyer",
+                "tags": [
+                  "british-airways",
+                  "wineflyer"
+                ],
+                "metadata": {
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-106",
+                "label": "Avolta",
+                "slug": "avolta",
+                "tags": [
+                  "partner",
+                  "british-airways",
+                  "tier-2",
+                  "avolta"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-107",
+                "label": "Kildare Village",
+                "slug": "kildare-village",
+                "tags": [
+                  "tier-2",
+                  "aer-lingus",
+                  "kildare-village"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-108",
+                "label": "Pizza Express",
+                "slug": "pizza-express",
+                "tags": [
+                  "partner",
+                  "british-airways",
+                  "tier-2",
+                  "pizza-express"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-109",
+                "label": "Air Bnb",
+                "slug": "air-bnb",
+                "tags": [
+                  "partner",
+                  "british-airways",
+                  "tier-2",
+                  "air-bnb"
+                ],
+                "metadata": {
+                  "tier": "tier-2",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "section-110",
+            "label": "New partners, products and ventures",
+            "slug": "new-partners-products-and-ventures",
+            "tags": [
+              "new-partners-products-and-ventures"
+            ],
+            "metadata": {},
+            "children": [
+              {
+                "id": "tag-111",
+                "label": "Marriott",
+                "slug": "marriott",
+                "tags": [
+                  "british-airways",
+                  "partner",
+                  "tier-3",
+                  "marriott"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-112",
+                "label": "Marriott",
+                "slug": "marriott",
+                "tags": [
+                  "aer-lingus",
+                  "partner",
+                  "tier-3",
+                  "marriott"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-113",
+                "label": "Bpme Rewards",
+                "slug": "bpme-rewards",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "bpme-rewards"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-114",
+                "label": "Bilt",
+                "slug": "bilt",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "british-airways",
+                  "bilt"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner",
+                  "opco": "british-airways"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-115",
+                "label": "Bilt",
+                "slug": "bilt",
+                "tags": [
+                  "aer-lingus",
+                  "partner",
+                  "tier-3",
+                  "bilt"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-116",
+                "label": "Bicester Village",
+                "slug": "bicester-village",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "bicester-village"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-117",
+                "label": "Ihg Hotels And Resorts",
+                "slug": "ihg-hotels-and-resorts",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "ihg-hotels-and-resorts"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-118",
+                "label": "Dynata",
+                "slug": "dynata",
+                "tags": [
+                  "aer-lingus",
+                  "partner",
+                  "tier-3",
+                  "dynata"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner",
+                  "opco": "aer-lingus"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-119",
+                "label": "First Caribbean",
+                "slug": "first-caribbean",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "first-caribbean"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-120",
+                "label": "Butterfield Bank",
+                "slug": "butterfield-bank",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "butterfield-bank"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-121",
+                "label": "Absa",
+                "slug": "absa",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "absa"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-122",
+                "label": "Dah Sing",
+                "slug": "dah-sing",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "dah-sing"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-123",
+                "label": "Indusind",
+                "slug": "indusind",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "indusind"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-124",
+                "label": "Nbk",
+                "slug": "nbk",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "nbk"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-125",
+                "label": "Capital One",
+                "slug": "capital-one",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "capital-one"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-126",
+                "label": "Uae",
+                "slug": "uae",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "hsbc",
+                  "uae"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-127",
+                "label": "Uk",
+                "slug": "uk",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "hsbc",
+                  "uk"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-128",
+                "label": "Usa",
+                "slug": "usa",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "hsbc",
+                  "usa"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-129",
+                "label": "India",
+                "slug": "india",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "hsbc",
+                  "india"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-130",
+                "label": "Nutmeg",
+                "slug": "nutmeg",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "nutmeg"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-131",
+                "label": "Cbk",
+                "slug": "cbk",
+                "tags": [
+                  "partner",
+                  "tier-3",
+                  "cbk"
+                ],
+                "metadata": {
+                  "tier": "tier-3",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-132",
+                "label": "Lounge Pass",
+                "slug": "lounge-pass",
+                "tags": [
+                  "partner",
+                  "tier-4",
+                  "lounge-pass"
+                ],
+                "metadata": {
+                  "tier": "tier-4",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-133",
+                "label": "Accor",
+                "slug": "accor",
+                "tags": [
+                  "partner",
+                  "tier-4",
+                  "accor"
+                ],
+                "metadata": {
+                  "tier": "tier-4",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-134",
+                "label": "Hello Fresh",
+                "slug": "hello-fresh",
+                "tags": [
+                  "partner",
+                  "tier-4",
+                  "hello-fresh"
+                ],
+                "metadata": {
+                  "tier": "tier-4",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-135",
+                "label": "Foxtons",
+                "slug": "foxtons",
+                "tags": [
+                  "partner",
+                  "tier-4",
+                  "foxtons"
+                ],
+                "metadata": {
+                  "tier": "tier-4",
+                  "type": "partner"
+                },
+                "children": []
+              },
+              {
+                "id": "tag-136",
+                "label": "Park Via",
+                "slug": "park-via",
+                "tags": [
+                  "partner",
+                  "tier-4",
+                  "park-via"
+                ],
+                "metadata": {
+                  "tier": "tier-4",
+                  "type": "partner"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "section-137",
+        "label": "TBC",
+        "slug": "tbc",
+        "tags": [
+          "tbc"
+        ],
+        "metadata": {
+          "section": "tbc"
+        },
+        "children": [
+          {
+            "id": "tbc-138",
+            "label": "Avios hotels BA + EI",
+            "slug": "avios-hotels-ba-ei",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-139",
+            "label": "AVIS BA +EI",
+            "slug": "avis-ba-ei",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-140",
+            "label": "Avios shop BA",
+            "slug": "avios-shop-ba",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-141",
+            "label": "eStore / CLO EI",
+            "slug": "estore-clo-ei",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-142",
+            "label": "Purchase BA +EI",
+            "slug": "purchase-ba-ei",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-143",
+            "label": "TWF BA",
+            "slug": "twf-ba",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-144",
+            "label": "TodayTix",
+            "slug": "todaytix",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-145",
+            "label": "eRewards",
+            "slug": "erewards",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-146",
+            "label": "Incipio",
+            "slug": "incipio",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-147",
+            "label": "Al Rajhi",
+            "slug": "al-rajhi",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-148",
+            "label": "Citibank",
+            "slug": "citibank",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-149",
+            "label": "DBS",
+            "slug": "dbs",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-150",
+            "label": "Pay.com.au",
+            "slug": "pay-com-au",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-151",
+            "label": "RBC Avion",
+            "slug": "rbc-avion",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-152",
+            "label": "SBI",
+            "slug": "sbi",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          },
+          {
+            "id": "tbc-153",
+            "label": "Wells Fargo",
+            "slug": "wells-fargo",
+            "tags": [],
+            "metadata": {},
+            "status": "tbc",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "section-154",
+        "label": "Metadata",
+        "slug": "metadata",
+        "tags": [
+          "metadata"
+        ],
+        "metadata": {},
+        "children": []
+      },
+      {
+        "id": "section-155",
+        "label": "Hierarchy",
+        "slug": "hierarchy",
+        "tags": [
+          "hierarchy"
+        ],
+        "metadata": {},
+        "children": []
+      }
+    ]
+  }
+}

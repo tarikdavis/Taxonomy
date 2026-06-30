@@ -1,0 +1,61 @@
+.panel {
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+  min-height: 560px;
+}
+
+.panel h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #4b5c74;
+}
+
+.field input,
+.field textarea,
+.field select {
+  border: 1px solid #c7d2e3;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font: inherit;
+  color: #1f2a3d;
+}
+
+.metadataSection h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.metadataList {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  color: #334155;
+  font-size: 13px;
+}
+
+.empty {
+  color: #6b7a90;
+  font-size: 14px;
+}
+
+.secondaryButton {
+  border: 1px solid #c7d2e3;
+  background: #f8fafc;
+  color: #1f2a3d;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: #eef4ff;
+}

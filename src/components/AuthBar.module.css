@@ -1,0 +1,78 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px 20px;
+  border: 1px solid #d8dee9;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: #6b7a90;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.primaryButton,
+.secondaryButton {
+  border-radius: 6px;
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.primaryButton {
+  border: 1px solid #1f6feb;
+  background: #1f6feb;
+  color: #fff;
+}
+
+.primaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  border: 1px solid #c7d2e3;
+  background: #f8fafc;
+  color: #1f2a3d;
+}
+
+.dirty {
+  color: #9a6700;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.message {
+  width: 100%;
+  margin: 8px 0 0;
+  color: #1f6feb;
+  font-size: 14px;
+}
+
+.message a {
+  color: inherit;
+}
+
+.error {
+  width: 100%;
+  margin: 8px 0 0;
+  color: #b42318;
+  font-size: 14px;
+}
