@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-30T21:41:00.521Z",
+  "updatedAt": "2026-06-30T21:41:45.678Z",
   "root": {
     "id": "root",
     "label": "Avios Taxonomy",
@@ -798,31 +798,6 @@
               "type": "partner"
             },
             "children": []
-          },
-          {
-            "id": "section-72",
-            "label": "Tiers",
-            "slug": "tiers",
-            "tags": [
-              "tiers"
-            ],
-            "metadata": {},
-            "children": [
-              {
-                "id": "tag-75",
-                "label": "Partner",
-                "slug": "partner",
-                "tags": [
-                  "tier-3",
-                  "partner"
-                ],
-                "metadata": {
-                  "tier": "tier-3",
-                  "type": "partner"
-                },
-                "children": []
-              }
-            ]
           },
           {
             "id": "section-77",
