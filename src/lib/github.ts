@@ -153,7 +153,7 @@ export async function saveTaxonomyViaPullRequest(
 
 export async function loadPublishedTaxonomy(): Promise<TaxonomyDocument> {
   const url = `${import.meta.env.BASE_URL}data/taxonomy.json`;
-  const response = await fetch(url);
+  const response = await fetch(url, { cache: 'no-store' });
   if (!response.ok) {
     throw new Error(`Failed to load taxonomy (${response.status}).`);
   }

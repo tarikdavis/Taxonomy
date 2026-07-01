@@ -63,7 +63,6 @@ export default function App() {
     const cloned = cloneDocument(next);
     setDocument(cloned);
     setBaselineJson(JSON.stringify(cloned));
-    saveDraft(cloned);
     if (sha) {
       setRemoteSha(sha);
       saveRemoteSha(sha);
@@ -74,13 +73,21 @@ export default function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const draft = loadDraft();
       const published = await loadPublishedTaxonomy();
+      const draft = loadDraft();
       const storedSha = loadRemoteSha();
 
-      if (draft && JSON.stringify(draft) !== JSON.stringify(published)) {
+      const draftIsNewer =
+        draft &&
+        draft.updatedAt > published.updatedAt &&
+        JSON.stringify(draft) !== JSON.stringify(published);
+
+      if (draftIsNewer) {
         applyDocument(draft, storedSha);
       } else {
+        if (draft && JSON.stringify(draft) !== JSON.stringify(published)) {
+          clearDraft();
+        }
         applyDocument(published, storedSha);
       }
 
@@ -155,6 +162,7 @@ export default function App() {
         setRemoteSha(latestSha);
         saveRemoteSha(latestSha);
       }
+      clearDraft();
     } catch (saveError) {
       setError(saveError instanceof Error ? saveError.message : 'Failed to save taxonomy.');
     } finally {

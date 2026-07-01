@@ -34,11 +34,13 @@ For local dev, use `VITE_BASE_PATH=/` so assets load from the dev server root.
 
 Canonical source of truth: `public/data/taxonomy.json`
 
-The markdown starter file can be re-imported with:
+The markdown starter file can be re-imported manually when needed:
 
 ```bash
 npm run import
 ```
+
+Note: the deploy workflow does **not** run import automatically — `public/data/taxonomy.json` in the repo is always the source of truth.
 
 ## GitHub Pages setup
 
