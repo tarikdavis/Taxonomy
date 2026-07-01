@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-30T21:41:45.678Z",
+  "updatedAt": "2026-07-01T07:35:23.502Z",
   "root": {
     "id": "root",
     "label": "Avios Taxonomy",
@@ -761,7 +761,107 @@
             "metadata": {
               "tier": "tier-1"
             },
-            "children": []
+            "children": [
+              {
+                "id": "tag-78",
+                "label": "Financial Services",
+                "slug": "financial-services",
+                "tags": [
+                  "financial-services"
+                ],
+                "metadata": {
+                  "category": "financial-services"
+                },
+                "children": [
+                  {
+                    "id": "tag-79",
+                    "label": "Amex",
+                    "slug": "amex",
+                    "tags": [
+                      "partner",
+                      "tier-1",
+                      "financial-services",
+                      "amex"
+                    ],
+                    "metadata": {
+                      "tier": "tier-1",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "tag-80",
+                    "label": "Chase",
+                    "slug": "chase",
+                    "tags": [
+                      "partner",
+                      "tier-1",
+                      "financial-services",
+                      "chase"
+                    ],
+                    "metadata": {
+                      "tier": "tier-1",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "tag-81",
+                    "label": "Lto",
+                    "slug": "lto",
+                    "tags": [
+                      "partner",
+                      "tier-1",
+                      "financial-services",
+                      "chase",
+                      "lto"
+                    ],
+                    "metadata": {
+                      "tier": "tier-1",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "tag-82",
+                    "label": "Bank Of Ireland",
+                    "slug": "bank-of-ireland",
+                    "tags": [
+                      "partner",
+                      "tier-1",
+                      "financial-services",
+                      "bank-of-ireland"
+                    ],
+                    "metadata": {
+                      "tier": "tier-1",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "tag-83",
+                    "label": "Barclays",
+                    "slug": "barclays",
+                    "tags": [
+                      "partner",
+                      "tier-1",
+                      "financial-services",
+                      "barclays"
+                    ],
+                    "metadata": {
+                      "tier": "tier-1",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
           },
           {
             "id": "tag-74",
@@ -773,7 +873,89 @@
             "metadata": {
               "tier": "tier-2"
             },
-            "children": []
+            "children": [
+              {
+                "id": "section-77",
+                "label": "Financial services",
+                "slug": "financial-services",
+                "tags": [
+                  "financial-services"
+                ],
+                "metadata": {},
+                "children": [
+                  {
+                    "id": "tag-84",
+                    "label": "Ur",
+                    "slug": "ur",
+                    "tags": [
+                      "partner",
+                      "tier-2",
+                      "financial-services",
+                      "chase",
+                      "ur"
+                    ],
+                    "metadata": {
+                      "tier": "tier-2",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "tag-85",
+                    "label": "Revolut",
+                    "slug": "revolut",
+                    "tags": [
+                      "partner",
+                      "tier-2",
+                      "financial-services",
+                      "revolut"
+                    ],
+                    "metadata": {
+                      "tier": "tier-2",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "tag-86",
+                    "label": "Mr",
+                    "slug": "mr",
+                    "tags": [
+                      "partner",
+                      "tier-2",
+                      "financial-services",
+                      "amex",
+                      "mr"
+                    ],
+                    "metadata": {
+                      "tier": "tier-2",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "tag-87",
+                    "label": "Royal Bank Of Canada",
+                    "slug": "royal-bank-of-canada",
+                    "tags": [
+                      "partner",
+                      "tier-2",
+                      "financial-services",
+                      "royal-bank-of-canada"
+                    ],
+                    "metadata": {
+                      "tier": "tier-2",
+                      "type": "partner",
+                      "category": "financial-services"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
           },
           {
             "id": "8ed5411c-85c4-43d1-b491-b8314dbf51d8",
@@ -798,185 +980,6 @@
               "type": "partner"
             },
             "children": []
-          },
-          {
-            "id": "section-77",
-            "label": "Financial services",
-            "slug": "financial-services",
-            "tags": [
-              "financial-services"
-            ],
-            "metadata": {},
-            "children": [
-              {
-                "id": "tag-78",
-                "label": "Financial Services",
-                "slug": "financial-services",
-                "tags": [
-                  "financial-services"
-                ],
-                "metadata": {
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-79",
-                "label": "Amex",
-                "slug": "amex",
-                "tags": [
-                  "partner",
-                  "tier-1",
-                  "financial-services",
-                  "amex"
-                ],
-                "metadata": {
-                  "tier": "tier-1",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-80",
-                "label": "Chase",
-                "slug": "chase",
-                "tags": [
-                  "partner",
-                  "tier-1",
-                  "financial-services",
-                  "chase"
-                ],
-                "metadata": {
-                  "tier": "tier-1",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-81",
-                "label": "Lto",
-                "slug": "lto",
-                "tags": [
-                  "partner",
-                  "tier-1",
-                  "financial-services",
-                  "chase",
-                  "lto"
-                ],
-                "metadata": {
-                  "tier": "tier-1",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-82",
-                "label": "Bank Of Ireland",
-                "slug": "bank-of-ireland",
-                "tags": [
-                  "partner",
-                  "tier-1",
-                  "financial-services",
-                  "bank-of-ireland"
-                ],
-                "metadata": {
-                  "tier": "tier-1",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-83",
-                "label": "Barclays",
-                "slug": "barclays",
-                "tags": [
-                  "partner",
-                  "tier-1",
-                  "financial-services",
-                  "barclays"
-                ],
-                "metadata": {
-                  "tier": "tier-1",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-84",
-                "label": "Ur",
-                "slug": "ur",
-                "tags": [
-                  "partner",
-                  "tier-2",
-                  "financial-services",
-                  "chase",
-                  "ur"
-                ],
-                "metadata": {
-                  "tier": "tier-2",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-85",
-                "label": "Revolut",
-                "slug": "revolut",
-                "tags": [
-                  "partner",
-                  "tier-2",
-                  "financial-services",
-                  "revolut"
-                ],
-                "metadata": {
-                  "tier": "tier-2",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-86",
-                "label": "Mr",
-                "slug": "mr",
-                "tags": [
-                  "partner",
-                  "tier-2",
-                  "financial-services",
-                  "amex",
-                  "mr"
-                ],
-                "metadata": {
-                  "tier": "tier-2",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              },
-              {
-                "id": "tag-87",
-                "label": "Royal Bank Of Canada",
-                "slug": "royal-bank-of-canada",
-                "tags": [
-                  "partner",
-                  "tier-2",
-                  "financial-services",
-                  "royal-bank-of-canada"
-                ],
-                "metadata": {
-                  "tier": "tier-2",
-                  "type": "partner",
-                  "category": "financial-services"
-                },
-                "children": []
-              }
-            ]
           },
           {
             "id": "section-88",
